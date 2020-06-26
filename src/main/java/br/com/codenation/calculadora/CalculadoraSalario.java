@@ -9,6 +9,7 @@ public class CalculadoraSalario {
 		double salarioMenosINSS = 0.0;
 		double salarioMenosIRRF = 0.0;
 
+		//If para calcular o valor do salário descontando o INSS
 		if (salarioBase <= 1500.00){
 			salarioMenosINSS = salarioBase - (salarioBase * 0.08);
 		}else if (salarioBase >= 1500.01 && salarioBase <= 4000.00){
@@ -17,6 +18,7 @@ public class CalculadoraSalario {
 			salarioMenosINSS = salarioBase - (salarioBase * 0.11);
 		}
 
+		//If para calcular o valor do salário agora descontando o IRRF
 		if (salarioMenosINSS <= 3000.00){
 			salarioMenosIRRF = salarioMenosINSS;
 		}else if (salarioMenosINSS >= 3000.01 && salarioMenosINSS <= 6000.00){
